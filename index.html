@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+
+    <!-- pacifico google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Righteous google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- PT Sans Caption google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bree Serif google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favIcon link -->
+    <link rel="shortcut icon" href="imgs/bookmark.png" type="image/x-icon" />
+    <!--           css links            -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <section class="home min-vh-100 py-5 position-relative">
+      <div class="container">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
+          <h1 class="position-relative">Bookmarker</h1>
+          <div
+            class="bookmarkerInputs mt-5 p-3 px-4 w-100 d-flex justify-content-center align-items-center flex-column g-4"
+          >
+            <h2 class="mb-5 mt-3">
+              <i class="fa-solid fa-bookmark icon1"></i>
+              Bookmark your favorite sites
+              <i class="fa-solid fa-bookmark icon2"></i>
+            </h2>
+
+            <div class="siteName w-100">
+              <label for="sitename" class="fw-bold">
+                <i class="fa-solid fa-book-bookmark pe-2"></i>
+                Site Name
+              </label>
+              <input
+                class="form-control mt-2"
+                type="text"
+                name="sitename"
+                id="sitename"
+                placeholder="Bookmark Name"
+              />
+            </div>
+
+            <div class="siteUrl w-100 my-4">
+              <label for="siteurl" class="fw-bold">
+                <i class="fa-solid fa-link"></i>
+                Site URL
+              </label>
+              <input
+                class="form-control mt-2"
+                type="url"
+                name="siteurl"
+                id="siteurl"
+                placeholder="Website URL"
+              />
+            </div>
+            <button class="btnn mb-1" type="submit" id="sbmtBtn">Submit</button>
+          </div>
+        </div>
+        <table class="table text-center mt-4">
+          <thead>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </thead>
+          <tbody id="tBody"></tbody>
+        </table>
+      </div>
+
+      <div
+        class="errorCard position-absolute start-0 top-0 h-100 w-100 d-flex justify-content-center align-items-center d-none"
+      >
+        <div class="cardContent bg-white rounded-2 shadow-lg p-4">
+          <header
+            class="w-100 d-flex justify-content-between align-items-center mb-2"
+          >
+            <div class="colors d-flex">
+              <span class="red rounded-circle me-2"></span>
+              <span class="yellow rounded-circle me-2"></span>
+              <span class="green rounded-circle me-2"></span>
+            </div>
+            <button class="btn border-0" id="closeBtn">
+              <i class="fa-solid fa-xmark fs-3"></i>
+            </button>
+          </header>
+          <p class=" warnHeading">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <ul class="list-unstyled listedErrors ps-2">
+            <li >
+              <span><i class="fa-solid fa-circle-arrow-right me-2 fs-5"></i></span>
+              Site name must contain at least 3 characters
+            </li>
+            <li >
+              <span><i class="fa-solid fa-circle-arrow-right me-2 fs-5"></i></span>
+              Site URL must be a valid one such (http://google.com)
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
